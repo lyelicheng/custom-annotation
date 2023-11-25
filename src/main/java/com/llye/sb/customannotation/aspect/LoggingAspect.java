@@ -1,4 +1,4 @@
-package com.llye.sb.customannotation;
+package com.llye.sb.customannotation.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -12,14 +12,14 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class RepositoryLoggingAspect {
+public class LoggingAspect {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Pointcut("execution(public * com.llye.sb.customannotation..*Repository+.*(..))")
     public void springDataRestRepository() {
     }
 
-    @Pointcut("@annotation(CustomQuery)")
+    @Pointcut("@annotation(com.llye.sb.customannotation.annotation.CustomQuery)")
     public void customQuery() {
     }
 

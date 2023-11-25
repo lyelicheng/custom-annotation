@@ -1,6 +1,6 @@
 package com.llye.sb.customannotation.repository;
 
-import com.llye.sb.customannotation.CustomQuery;
+import com.llye.sb.customannotation.annotation.CustomQuery;
 import com.llye.sb.customannotation.entity.Account;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
